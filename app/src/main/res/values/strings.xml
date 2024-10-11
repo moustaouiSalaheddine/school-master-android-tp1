@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Application01</string>
     <string name="app_message">Coucou le Monde !</string>
+    <string name="go_to_second_activity_button">Aller au deuxième écran</string>
+    <string name="welcome_second_activity">Bienvenue à la deuxième activité</string>
+    <string name="go_back">Retour</string>
 </resources>

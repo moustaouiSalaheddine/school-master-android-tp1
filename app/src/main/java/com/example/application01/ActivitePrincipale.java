@@ -1,5 +1,6 @@
 package com.example.application01;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -8,6 +9,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 public class ActivitePrincipale extends AppCompatActivity {
 
@@ -22,6 +25,14 @@ public class ActivitePrincipale extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+        Button goToSecondActivity = findViewById(R.id.goToSecondActivityButton);
+        goToSecondActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ActivitePrincipale.this, SecondActivity.class);
+                startActivity(intent); // Starts the SecondActivity
+            }
         });
     }
     @Override
